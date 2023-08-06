@@ -1,0 +1,8 @@
+# Too much logging
+logging.level: {
+  com.netflix: WARN,
+  org.apache: WARN,
+  org.springframework: WARN
+}
+hystrix.dashboard.proxy-stream-allow-list: "*"
+server.port: 7979

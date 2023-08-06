@@ -1,0 +1,11 @@
+eureka.client.serviceUrl: {defaultZone: http://localhost:8761/eureka/}
+# Too much logging
+logging.level: {
+  com.netflix: WARN,
+  org.mongodb: WARN,
+  org.springframework: WARN
+}
+management.endpoints.web.exposure.include: metrics, hystrix.stream
+spring.cloud.stream.bindings.input: {destination: learning-spring-boot}
+spring.cloud.stream.bindings.output: {destination: learning-spring-boot, group: comments}
+spring.mongodb.embedded.version: 3.4.11

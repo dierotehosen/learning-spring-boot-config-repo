@@ -1,0 +1,15 @@
+eureka.client:
+  registerWithEureka: false
+  fetchRegistry: false
+  serviceUrl:
+    defaultZone:
+      http://${eureka.instance.hostname}:${server.port}/eureka/
+eureka.instance.hostname: localhost
+# Too much logging
+logging.level: {
+  com.netflix: WARN,
+  com.sun.jersey: WARN,
+  org.apache: WARN,
+  org.springframework: WARN
+}
+server.port: 8761
